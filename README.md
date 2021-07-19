@@ -17,8 +17,6 @@ cd YouBike_DataTable
 npm install
 # Run the app
 npm run start
-# Or build the app
-npm run build
 ```
 
 ## 功能及特色

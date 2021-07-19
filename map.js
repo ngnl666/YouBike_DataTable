@@ -54,7 +54,7 @@ module.exports = setStationPlace;
 
 const popupWindow = (station) => {
   const infowindow = new google.maps.InfoWindow({
-    content: station.sna,
+    content: `<p class="fw-bolder">${station.sna}<p>可借車輛: ${station.sbi}<br/>可還車位: ${station.bemp}`,
   });
   infowindow.open({
     anchor: markers.find((item) => item.title === station.sna),

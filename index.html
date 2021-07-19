@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval' http://platform.linkedin.com "
+    />
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./all.css" />
+    <title>MyDataTable</title>
+  </head>
+  <body>
+    <div class="logo d-flex justify-content-between">
+      <div class="logo__name">
+        <h1 class="title fw-bolder">臺北市公共自行車站點資訊</h1>
+        <span class="text-secondary">本平台每分鐘即時更新資料 - </span>
+        <span class="logo__counter text-secondary">00:59</span>
+      </div>
+      <div class="logo__image">
+        <img src="./images/logo.png" alt="youbike" />
+      </div>
+    </div>
+
+    <div class="wrap">
+      <table id="myTable" class="display" style="width: 90%">
+        <thead>
+          <tr>
+            <th>區域</th>
+            <th>站名</th>
+            <th>可借車輛</th>
+            <th>可還車位</th>
+            <th>營運</th>
+            <th>更新時間</th>
+          </tr>
+        </thead>
+      </table>
+
+      <p class="text-end text-secondary my-3">
+        資料來源- 臺北市政府資料開放平臺 (https://data.taipei/#/)
+      </p>
+
+      <div class="container">
+        <div id="map"></div>
+      </div>
+
+      <p class="text-center text-secondary my-3">
+        此為個人作品，無任何商業用途
+      </p>
+    </div>
+
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFkrcN56LtUIPy-XN5YMs91feRs2aZURs&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
+    <script src="./renderer.js"></script>
+    <script src="./map.js"></script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "my-data-table",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-packager . Youbike --out my-data-table --overwrite --platform=win32 --arch=x64 --ignore=node_modules/electron-*"
+  },
+  "author": "ArronSu",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^13.1.6"
+  },
+  "dependencies": {
+    "@googlemaps/js-api-loader": "^1.12.1",
+    "bootstrap": "^5.0.2",
+    "datatables.net-dt": "^1.1.0",
+    "jquery": "^3.6.0"
+  }
+}
